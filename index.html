@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.prod.www.spiegel.de/public/spon/generated/css/styles.spon.a63bc41588f1850ec4ba9a51eb8390b2.css">
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    </head>
+    <body class="bg-attention">
+        <div class="relative z-20 w-full h-full mx-auto sm:max-w-sm md:max-w-md lg:max-w-lg">
+
+            <div class="relative flex flex-col items-center justify-evenly sm:w-full md:w-10/12 lg:w-8/12 h-full mx-auto sm:p-16 md:p-24 lg:p-24 pb-64">
+                <h1 class="font-brandUI text-white font-extrabold text-3xl text-center">Platform & Design</h1>
+                <button id="play_btn" class="py-12 px-24 rounded-24 bg-white uppercase tracking-wider text-xl text-primary-base font-sansUI font-bold mb-64" onclick="play()" >
+                    Start
+                </button>
+            </div>
+
+
+
+        </div>
+        <style>
+            
+        </style>
+        <script>
+            function play() {
+                new Audio('2022_DDD_Jingle.mp3').play();
+                document.getElementById("play_btn").disabled = true;
+
+                setTimeout(shootConfetti, 500);
+                setTimeout(shootConfetti, 300);
+                setTimeout(shootConfetti, 1000);
+                setTimeout(shootConfetti, 1700);
+                setTimeout(shootConfetti, 1500);
+                setTimeout(shootConfetti, 700);
+                setTimeout(shootConfetti, 1000);
+                setTimeout(shootConfetti, 2900);
+                setTimeout(shootConfetti, 5000);
+                setTimeout(shootConfetti, 1300);
+                setTimeout(shootConfetti, 1000);
+                setTimeout(shootConfetti, 3300);
+                setTimeout(shootConfetti, 500);
+                setTimeout(shootConfetti, 2000);
+                setTimeout(shootConfetti, 1000);
+                setTimeout(shootConfetti, 300);
+                setTimeout(shootConfetti, 1500);
+                setTimeout(shootConfetti, 2700);
+                setTimeout(shootConfetti, 3000);
+                setTimeout(shootConfetti, 1300);
+                setTimeout(shootConfetti, 5000);
+                setTimeout(shootConfetti, 1300);
+                setTimeout(shootConfetti, 1000);
+                setTimeout(shootConfetti, 300);
+                document.getElementById("play_btn").disabled = false;
+                
+            }
+            function shootConfetti() {
+                function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+                }
+
+                confetti({
+                angle: randomInRange(55, 125),
+                spread: randomInRange(50, 70),
+                particleCount: randomInRange(50, 100),
+                origin: { y: 0.55 }
+                });
+            }
+        </script>
+    </body>
+</html>
